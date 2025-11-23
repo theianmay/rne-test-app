@@ -7,7 +7,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 export default function TestScreen() {
   return (
     <SafeAreaView style={styles.safeArea} edges={['left', 'right', 'bottom', 'top']}>
-      <StatusBar barStyle="dark-content" backgroundColor="transparent" translucent />
+      <StatusBar barStyle="dark-content" backgroundColor="#f5f5f5" translucent={false} />
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
         <Text h1 style={styles.title}>Experimental Test Area</Text>
         <Text style={styles.subtitle}>Add and test new components here</Text>

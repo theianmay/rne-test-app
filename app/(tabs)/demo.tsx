@@ -15,7 +15,7 @@ export default function DemoScreen() {
 
   return (
     <SafeAreaView style={styles.safeArea} edges={['left', 'right', 'bottom', 'top']}>
-      <StatusBar barStyle="dark-content" backgroundColor="transparent" translucent />
+      <StatusBar barStyle="dark-content" backgroundColor="#f5f5f5" translucent={false} />
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
         <Text h1 style={styles.title}>RNE Component Demo</Text>
         <Text style={styles.subtitle}>Stable components showcase</Text>

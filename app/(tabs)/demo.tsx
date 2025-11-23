@@ -8,7 +8,7 @@ import React from 'react';
 import { ScrollView, StatusBar, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-export default function RNETestScreen() {
+export default function DemoScreen() {
   const [inputValue, setInputValue] = React.useState('');
   const [rating, setRating] = React.useState(3);
   const [airbnbRating, setAirbnbRating] = React.useState(4);
@@ -17,8 +17,8 @@ export default function RNETestScreen() {
     <SafeAreaView style={styles.safeArea} edges={['left', 'right', 'bottom', 'top']}>
       <StatusBar barStyle="dark-content" backgroundColor="transparent" translucent />
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-        <Text h1 style={styles.title}>React Native Elements Test</Text>
-        <Text style={styles.subtitle}>Testing bleeding edge components</Text>
+        <Text h1 style={styles.title}>RNE Component Demo</Text>
+        <Text style={styles.subtitle}>Stable components showcase</Text>
 
       {/* Buttons Section */}
       <Card>

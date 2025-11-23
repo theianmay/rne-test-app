@@ -1,8 +1,9 @@
+import FontAwesome from '@react-native-vector-icons/fontawesome';
+import MaterialIcons from '@react-native-vector-icons/material-icons';
 import { Tabs } from 'expo-router';
 import React from 'react';
 
 import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 
@@ -17,24 +18,17 @@ export default function TabLayout() {
         tabBarButton: HapticTab,
       }}>
       <Tabs.Screen
-        name="index"
+        name="demo"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: 'Demo',
+          tabBarIcon: ({ color }) => <MaterialIcons name="check-circle" size={28} color={color} />,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="test"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
-        }}
-      />
-      <Tabs.Screen
-        name="rne-test"
-        options={{
-          title: 'RNE Test',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="sparkles" color={color} />,
+          title: 'Test',
+          tabBarIcon: ({ color }) => <FontAwesome name="flask" size={28} color={color} />,
         }}
       />
     </Tabs>

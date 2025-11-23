@@ -3,13 +3,15 @@ import FontAwesome from '@react-native-vector-icons/fontawesome';
 import FontAwesome6 from '@react-native-vector-icons/fontawesome6';
 import Ionicons from '@react-native-vector-icons/ionicons';
 import MaterialIcons from '@react-native-vector-icons/material-icons';
-import { Avatar, Badge, Button, Card, Chip, Divider, Input, Text } from '@rneui/themed';
+import { AirbnbRating, Avatar, Badge, Button, Card, Chip, Divider, Input, Rating, Text } from '@rneui/themed';
 import React from 'react';
 import { ScrollView, StatusBar, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function RNETestScreen() {
   const [inputValue, setInputValue] = React.useState('');
+  const [rating, setRating] = React.useState(3);
+  const [airbnbRating, setAirbnbRating] = React.useState(4);
 
   return (
     <SafeAreaView style={styles.safeArea} edges={['left', 'right', 'bottom', 'top']}>
@@ -96,6 +98,35 @@ export default function RNETestScreen() {
           <Chip title="Solid Chip" />
           <Chip title="Outline" type="outline" />
           <Chip title="Disabled" disabled />
+        </View>
+      </Card>
+
+      {/* Rating Section */}
+      <Card>
+        <Card.Title>Ratings</Card.Title>
+        <Card.Divider />
+        <View style={styles.section}>
+          <Text h4 style={{ marginBottom: 8 }}>Standard Rating (Hearts)</Text>
+          <Rating
+            type="heart"
+            ratingCount={5}
+            imageSize={30}
+            startingValue={rating}
+            onFinishRating={setRating}
+            style={{ paddingVertical: 10 }}
+          />
+          <Text style={{ textAlign: 'center', marginTop: 8 }}>
+            Rating: {rating}/5
+          </Text>
+
+          <Text h4 style={{ marginTop: 20, marginBottom: 8 }}>Airbnb Style Rating</Text>
+          <AirbnbRating
+            count={5}
+            defaultRating={airbnbRating}
+            size={30}
+            onFinishRating={setAirbnbRating}
+            showRating
+          />
         </View>
       </Card>
 

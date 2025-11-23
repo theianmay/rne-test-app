@@ -1,3 +1,8 @@
+import Feather from '@react-native-vector-icons/feather';
+import FontAwesome from '@react-native-vector-icons/fontawesome';
+import FontAwesome6 from '@react-native-vector-icons/fontawesome6';
+import Ionicons from '@react-native-vector-icons/ionicons';
+import MaterialIcons from '@react-native-vector-icons/material-icons';
 import { Avatar, Badge, Button, Card, Chip, Divider, Input, Text } from '@rneui/themed';
 import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
@@ -101,6 +106,75 @@ export default function RNETestScreen() {
           <Text>Content below</Text>
           <Divider style={{ marginVertical: 10 }} inset />
           <Text>Inset divider</Text>
+        </View>
+      </Card>
+
+      {/* Icons Section - New Modular API */}
+      <Card>
+        <Card.Title>Icons (New Modular API)</Card.Title>
+        <Card.Divider />
+        <View style={styles.section}>
+          <Text h4 style={{ marginBottom: 8 }}>FontAwesome</Text>
+          <View style={[styles.row, { marginBottom: 16 }]}>
+            <FontAwesome name="home" size={30} color="#517fa4" />
+            <FontAwesome name="star" size={30} color="#f50" />
+            <FontAwesome name="heart" size={30} color="#e91e63" />
+            <FontAwesome name="rocket" size={30} color="#9c27b0" />
+          </View>
+
+          <Text h4 style={{ marginBottom: 8 }}>Material Icons</Text>
+          <View style={[styles.row, { marginBottom: 16 }]}>
+            <MaterialIcons name="favorite" size={30} color="#e91e63" />
+            <MaterialIcons name="settings" size={30} color="#607d8b" />
+            <MaterialIcons name="search" size={30} color="#2196f3" />
+            <MaterialIcons name="account-circle" size={30} color="#4caf50" />
+          </View>
+
+          <Text h4 style={{ marginBottom: 8 }}>Ionicons</Text>
+          <View style={[styles.row, { marginBottom: 16 }]}>
+            <Ionicons name="home" size={30} color="#ff9800" />
+            <Ionicons name="star" size={30} color="#ffc107" />
+            <Ionicons name="heart" size={30} color="#f44336" />
+            <Ionicons name="rocket" size={30} color="#673ab7" />
+          </View>
+
+          <Text h4 style={{ marginBottom: 8 }}>Feather</Text>
+          <View style={[styles.row, { marginBottom: 16 }]}>
+            <Feather name="home" size={30} color="#00bcd4" />
+            <Feather name="star" size={30} color="#ffeb3b" />
+            <Feather name="heart" size={30} color="#ff5722" />
+            <Feather name="send" size={30} color="#3f51b5" />
+          </View>
+
+          <Text h4 style={{ marginBottom: 8 }}>FontAwesome 6</Text>
+          <View style={styles.row}>
+            <FontAwesome6 name="house" size={30} color="#795548" iconStyle="solid" />
+            <FontAwesome6 name="star" size={30} color="#ff9800" iconStyle="solid" />
+            <FontAwesome6 name="heart" size={30} color="#e91e63" iconStyle="solid" />
+            <FontAwesome6 name="fire" size={30} color="#ff5722" iconStyle="solid" />
+          </View>
+        </View>
+      </Card>
+
+      {/* Buttons with Icons */}
+      <Card>
+        <Card.Title>Buttons with Icons (New API)</Card.Title>
+        <Card.Divider />
+        <View style={styles.section}>
+          <Button
+            title="Home"
+            icon={<FontAwesome name="home" size={20} color="white" style={{ marginRight: 8 }} />}
+          />
+          <Button
+            title="Favorite"
+            type="outline"
+            icon={<MaterialIcons name="favorite" size={20} color="#2089dc" style={{ marginRight: 8 }} />}
+          />
+          <Button
+            title="Send"
+            type="clear"
+            icon={<Feather name="send" size={20} color="#2089dc" style={{ marginRight: 8 }} />}
+          />
         </View>
       </Card>
 

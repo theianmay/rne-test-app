@@ -5,15 +5,18 @@ import Ionicons from '@react-native-vector-icons/ionicons';
 import MaterialIcons from '@react-native-vector-icons/material-icons';
 import { Avatar, Badge, Button, Card, Chip, Divider, Input, Text } from '@rneui/themed';
 import React from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { ScrollView, StatusBar, StyleSheet, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function RNETestScreen() {
   const [inputValue, setInputValue] = React.useState('');
 
   return (
-    <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-      <Text h1 style={styles.title}>React Native Elements Test</Text>
-      <Text style={styles.subtitle}>Testing bleeding edge components</Text>
+    <SafeAreaView style={styles.safeArea} edges={['left', 'right', 'bottom', 'top']}>
+      <StatusBar barStyle="dark-content" backgroundColor="transparent" translucent />
+      <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+        <Text h1 style={styles.title}>React Native Elements Test</Text>
+        <Text style={styles.subtitle}>Testing bleeding edge components</Text>
 
       {/* Buttons Section */}
       <Card>
@@ -192,14 +195,18 @@ export default function RNETestScreen() {
       </Card>
 
       <View style={{ height: 40 }} />
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  safeArea: {
     flex: 1,
     backgroundColor: '#f5f5f5',
+  },
+  container: {
+    flex: 1,
   },
   contentContainer: {
     padding: 16,

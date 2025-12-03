@@ -184,6 +184,52 @@ export default function AvatarScreen() {
             <Text style={styles.note}>Tap the edit icon on the third avatar</Text>
           </Card>
 
+          {/* Custom Accessory Icons */}
+          <Card>
+            <Card.Title>Custom Accessory Icons</Card.Title>
+            <Card.Divider />
+            <View style={[styles.section, styles.row]}>
+              <View style={{ alignItems: 'center' }}>
+                <Avatar
+                  size={80}
+                  rounded
+                  source={{ uri: 'https://randomuser.me/api/portraits/women/44.jpg' }}
+                >
+                  <Avatar.Accessory name="edit" type="material" {...({} as any)} />
+                </Avatar>
+                <Text style={{ fontSize: 12, marginTop: 4 }}>Edit Icon</Text>
+              </View>
+              <View style={{ alignItems: 'center' }}>
+                <Avatar
+                  size={80}
+                  rounded
+                  title="MK"
+                  containerStyle={{ backgroundColor: '#e91e63' }}
+                >
+                  <Avatar.Accessory 
+                    {...({ name: "check", type: "material" } as any)}
+                    style={{ backgroundColor: '#4caf50' }} 
+                  />
+                </Avatar>
+                <Text style={{ fontSize: 12, marginTop: 4 }}>Check Icon</Text>
+              </View>
+              <View style={{ alignItems: 'center' }}>
+                <Avatar
+                  size={80}
+                  rounded
+                  source={{ uri: 'https://randomuser.me/api/portraits/men/41.jpg' }}
+                >
+                  <Avatar.Accessory 
+                    {...({ name: "add", type: "material" } as any)}
+                    style={{ backgroundColor: '#ff5722' }} 
+                  />
+                </Avatar>
+                <Text style={{ fontSize: 12, marginTop: 4 }}>Add Icon</Text>
+              </View>
+            </View>
+            <Text style={styles.note}>Custom icons using name and type props (edit, check, add)</Text>
+          </Card>
+
           {/* Pressable Avatars */}
           <Card>
             <Card.Title>Pressable Avatars</Card.Title>

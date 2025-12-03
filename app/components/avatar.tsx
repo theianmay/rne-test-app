@@ -1,7 +1,9 @@
+import FontAwesome from '@react-native-vector-icons/fontawesome';
+import MaterialIcons from '@react-native-vector-icons/material-icons';
 import { Avatar, Card, Text } from '@rneui/themed';
 import { Stack } from 'expo-router';
 import React from 'react';
-import { ScrollView, StatusBar, StyleSheet, View } from 'react-native';
+import { ScrollView, StatusBar, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function AvatarScreen() {
@@ -16,9 +18,32 @@ export default function AvatarScreen() {
             Avatars are used to represent a person or object.
           </Text>
 
-          {/* Basic Avatars */}
+          {/* Basic Avatars with Images */}
           <Card>
-            <Card.Title>Avatar Types</Card.Title>
+            <Card.Title>Image Avatars</Card.Title>
+            <Card.Divider />
+            <View style={[styles.section, styles.row]}>
+              <Avatar
+                size={64}
+                rounded
+                source={{ uri: 'https://randomuser.me/api/portraits/men/36.jpg' }}
+              />
+              <Avatar
+                size={64}
+                rounded
+                source={{ uri: 'https://randomuser.me/api/portraits/women/44.jpg' }}
+              />
+              <Avatar
+                size={64}
+                rounded
+                source={{ uri: 'https://randomuser.me/api/portraits/men/41.jpg' }}
+              />
+            </View>
+          </Card>
+
+          {/* Title/Initial Avatars */}
+          <Card>
+            <Card.Title>Title/Initial Avatars</Card.Title>
             <Card.Divider />
             <View style={[styles.section, styles.row]}>
               <Avatar
@@ -30,14 +55,45 @@ export default function AvatarScreen() {
               <Avatar
                 size={64}
                 rounded
-                source={{ uri: 'https://randomuser.me/api/portraits/men/36.jpg' }}
+                title="AB"
+                containerStyle={{ backgroundColor: '#6733b9' }}
               />
               <Avatar
                 size={64}
                 rounded
-                title="AB"
-                containerStyle={{ backgroundColor: '#6733b9' }}
+                title="MK"
+                containerStyle={{ backgroundColor: '#e91e63' }}
               />
+            </View>
+          </Card>
+
+          {/* Icon Avatars */}
+          <Card>
+            <Card.Title>Icon Avatars</Card.Title>
+            <Card.Divider />
+            <View style={[styles.section, styles.row]}>
+              <Avatar
+                size={64}
+                rounded
+                icon={{ name: 'user', type: 'font-awesome' }}
+                containerStyle={{ backgroundColor: '#9c27b0' }}
+              >
+                <FontAwesome name="user" size={32} color="white" />
+              </Avatar>
+              <Avatar
+                size={64}
+                rounded
+                containerStyle={{ backgroundColor: '#ff9800' }}
+              >
+                <MaterialIcons name="person" size={40} color="white" />
+              </Avatar>
+              <Avatar
+                size={64}
+                rounded
+                containerStyle={{ backgroundColor: '#4caf50' }}
+              >
+                <FontAwesome name="heart" size={32} color="white" />
+              </Avatar>
             </View>
           </Card>
 
@@ -92,6 +148,66 @@ export default function AvatarScreen() {
             </View>
           </Card>
 
+          {/* Avatar with Accessory */}
+          <Card>
+            <Card.Title>Avatar with Accessory</Card.Title>
+            <Card.Divider />
+            <View style={[styles.section, styles.row]}>
+              <Avatar
+                size={80}
+                rounded
+                source={{ uri: 'https://randomuser.me/api/portraits/men/36.jpg' }}
+              >
+                <Avatar.Accessory />
+              </Avatar>
+              <Avatar
+                size={80}
+                rounded
+                title="JD"
+                containerStyle={{ backgroundColor: '#3d4db7' }}
+              >
+                <Avatar.Accessory
+                  style={{ backgroundColor: '#4caf50' }}
+                />
+              </Avatar>
+              <Avatar
+                size={80}
+                rounded
+                containerStyle={{ backgroundColor: '#9c27b0' }}
+              >
+                <FontAwesome name="user" size={40} color="white" />
+                <Avatar.Accessory
+                  onPress={() => alert('Edit Avatar')}
+                />
+              </Avatar>
+            </View>
+            <Text style={styles.note}>Tap the edit icon on the third avatar</Text>
+          </Card>
+
+          {/* Pressable Avatars */}
+          <Card>
+            <Card.Title>Pressable Avatars</Card.Title>
+            <Card.Divider />
+            <View style={[styles.section, styles.row]}>
+              <TouchableOpacity onPress={() => alert('Avatar 1 pressed!')}>
+                <Avatar
+                  size={64}
+                  rounded
+                  source={{ uri: 'https://randomuser.me/api/portraits/women/44.jpg' }}
+                />
+              </TouchableOpacity>
+              <TouchableOpacity onPress={() => alert('Avatar 2 pressed!')}>
+                <Avatar
+                  size={64}
+                  rounded
+                  title="AB"
+                  containerStyle={{ backgroundColor: '#e91e63' }}
+                />
+              </TouchableOpacity>
+            </View>
+            <Text style={styles.note}>Tap avatars to see interaction</Text>
+          </Card>
+
           <View style={{ height: 40 }} />
         </ScrollView>
       </SafeAreaView>
@@ -128,5 +244,12 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
     flexWrap: 'wrap',
+  },
+  note: {
+    textAlign: 'center',
+    marginTop: 10,
+    fontSize: 14,
+    color: '#999',
+    fontStyle: 'italic',
   },
 });

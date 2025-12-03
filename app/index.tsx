@@ -7,6 +7,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Component list with routes
 const components = [
+  { name: 'AirbnbRating', route: '/components/airbnbrating', icon: 'star-rate' },
   { name: 'Avatar', route: '/components/avatar', icon: 'account-circle' },
   { name: 'Badge', route: '/components/badge', icon: 'notifications' },
   { name: 'Button', route: '/components/button', icon: 'touch-app' },

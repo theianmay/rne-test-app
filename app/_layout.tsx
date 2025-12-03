@@ -26,9 +26,10 @@ export default function RootLayout() {
         <>
           <Stack>
             <Stack.Screen name="index" options={{ headerShown: false }} />
-            <Stack.Screen name="components/button" options={{ headerShown: true, title: 'Button' }} />
+            <Stack.Screen name="components/airbnbrating" options={{ headerShown: true, title: 'AirbnbRating' }} />
             <Stack.Screen name="components/avatar" options={{ headerShown: true, title: 'Avatar' }} />
             <Stack.Screen name="components/badge" options={{ headerShown: true, title: 'Badge' }} />
+            <Stack.Screen name="components/button" options={{ headerShown: true, title: 'Button' }} />
             <Stack.Screen name="components/card" options={{ headerShown: true, title: 'Card' }} />
             <Stack.Screen name="components/chip" options={{ headerShown: true, title: 'Chip' }} />
             <Stack.Screen name="components/divider" options={{ headerShown: true, title: 'Divider' }} />

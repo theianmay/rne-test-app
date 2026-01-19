@@ -34,18 +34,28 @@ This document provides comprehensive guidance on testing the RNE test applicatio
 
 ## Unit Testing with RNTL
 
-### Setup
+### Setup (Following Official Expo Docs)
 
-Dependencies are already configured in `package.json`:
+Install dependencies using `npx expo install` (recommended):
 
 ```bash
-npm install
+npx expo install jest-expo jest @testing-library/react-native "--" --dev
 ```
 
-### Configuration Files
+Jest configuration is in `package.json`:
 
-- `jest.config.js` - Jest configuration
-- `jest.setup.js` - Test setup and mocks
+```json
+{
+  "jest": {
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@sentry/react-native|native-base|react-native-svg|@rneui/.*)"
+    ]
+  }
+}
+```
+
+> **Important:** Do NOT use a separate `jest.config.js` file - keep config in `package.json` per official Expo docs.
 
 ### Running Unit Tests
 
@@ -75,7 +85,6 @@ __tests__/
 ### Example Unit Test
 
 ```tsx
-import React from "react";
 import { render, fireEvent } from "@testing-library/react-native";
 import { Button } from "@rneui/themed";
 

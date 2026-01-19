@@ -1,0 +1,18 @@
+appId: com.rnetestapp
+---
+# Image Component E2E Tests
+- launchApp
+
+# Navigate to Image demo
+- scroll:
+    direction: DOWN
+- tapOn: "Image"
+
+# Verify screen loaded
+- assertVisible: "Image"
+
+# Take screenshot
+- takeScreenshot: image_demo
+
+# Navigate back
+- back

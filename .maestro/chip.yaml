@@ -1,0 +1,16 @@
+appId: com.rnetestapp
+---
+# Chip Component E2E Tests
+- launchApp
+
+# Navigate to Chip demo
+- tapOn: "Chip"
+
+# Verify screen loaded
+- assertVisible: "Chip"
+
+# Take screenshot
+- takeScreenshot: chip_demo
+
+# Navigate back
+- back

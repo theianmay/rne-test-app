@@ -1,0 +1,16 @@
+appId: com.rnetestapp
+---
+# Badge Component E2E Tests
+- launchApp
+
+# Navigate to Badge demo
+- tapOn: "Badge"
+
+# Verify screen loaded
+- assertVisible: "Badge"
+
+# Take screenshot
+- takeScreenshot: badge_demo
+
+# Navigate back
+- back

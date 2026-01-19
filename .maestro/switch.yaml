@@ -1,0 +1,18 @@
+appId: com.rnetestapp
+---
+# Switch Component E2E Tests
+- launchApp
+
+# Navigate to Switch demo
+- scroll:
+    direction: DOWN
+- tapOn: "Switch"
+
+# Verify screen loaded
+- assertVisible: "Switch"
+
+# Take screenshot
+- takeScreenshot: switch_demo
+
+# Navigate back
+- back

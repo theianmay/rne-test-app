@@ -1,0 +1,20 @@
+appId: com.rnetestapp
+---
+# Card Component E2E Tests
+- launchApp
+
+# Navigate to Card demo
+- tapOn: "Card"
+
+# Verify screen loaded
+- assertVisible: "Card"
+
+# Scroll through examples
+- scroll:
+    direction: DOWN
+
+# Take screenshot
+- takeScreenshot: card_demo
+
+# Navigate back
+- back

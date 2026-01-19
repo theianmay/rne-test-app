@@ -1,0 +1,18 @@
+appId: com.rnetestapp
+---
+# Header Component E2E Tests
+- launchApp
+
+# Navigate to Header demo
+- scroll:
+    direction: DOWN
+- tapOn: "Header"
+
+# Verify screen loaded
+- assertVisible: "Header"
+
+# Take screenshot
+- takeScreenshot: header_demo
+
+# Navigate back
+- back

@@ -1,0 +1,20 @@
+appId: com.rnetestapp
+---
+# Avatar Component E2E Tests
+- launchApp
+
+# Navigate to Avatar demo
+- tapOn: "Avatar"
+
+# Verify screen loaded
+- assertVisible: "Avatar"
+
+# Test scrolling through examples
+- scroll:
+    direction: DOWN
+
+# Take screenshot
+- takeScreenshot: avatar_demo
+
+# Navigate back
+- back

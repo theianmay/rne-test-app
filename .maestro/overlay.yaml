@@ -1,0 +1,18 @@
+appId: com.rnetestapp
+---
+# Overlay Component E2E Tests
+- launchApp
+
+# Navigate to Overlay demo
+- scroll:
+    direction: DOWN
+- tapOn: "Overlay"
+
+# Verify screen loaded
+- assertVisible: "Overlay"
+
+# Take screenshot
+- takeScreenshot: overlay_demo
+
+# Navigate back
+- back

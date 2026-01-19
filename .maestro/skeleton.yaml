@@ -1,0 +1,18 @@
+appId: com.rnetestapp
+---
+# Skeleton Component E2E Tests
+- launchApp
+
+# Navigate to Skeleton demo
+- scroll:
+    direction: DOWN
+- tapOn: "Skeleton"
+
+# Verify screen loaded
+- assertVisible: "Skeleton"
+
+# Take screenshot
+- takeScreenshot: skeleton_demo
+
+# Navigate back
+- back

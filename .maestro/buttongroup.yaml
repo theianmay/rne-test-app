@@ -1,0 +1,16 @@
+appId: com.rnetestapp
+---
+# ButtonGroup Component E2E Tests
+- launchApp
+
+# Navigate to ButtonGroup demo
+- tapOn: "ButtonGroup"
+
+# Verify screen loaded
+- assertVisible: "ButtonGroup"
+
+# Take screenshot
+- takeScreenshot: buttongroup_demo
+
+# Navigate back
+- back

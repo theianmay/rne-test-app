@@ -1,0 +1,18 @@
+appId: com.rnetestapp
+---
+# Tile Component E2E Tests
+- launchApp
+
+# Navigate to Tile demo
+- scroll:
+    direction: DOWN
+- tapOn: "Tile"
+
+# Verify screen loaded
+- assertVisible: "Tile"
+
+# Take screenshot
+- takeScreenshot: tile_demo
+
+# Navigate back
+- back

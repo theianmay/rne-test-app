@@ -1,0 +1,18 @@
+appId: com.rnetestapp
+---
+# Icon Component E2E Tests
+- launchApp
+
+# Navigate to Icon demo
+- scroll:
+    direction: DOWN
+- tapOn: "Icon"
+
+# Verify screen loaded
+- assertVisible: "Icon"
+
+# Take screenshot
+- takeScreenshot: icon_demo
+
+# Navigate back
+- back

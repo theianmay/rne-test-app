@@ -1,0 +1,22 @@
+appId: com.rnetestapp
+---
+# Text Component E2E Tests
+- launchApp
+
+# Navigate to Text demo
+- scroll:
+    direction: DOWN
+- tapOn: "Text"
+
+# Verify screen loaded
+- assertVisible: "Text"
+
+# Scroll through examples
+- scroll:
+    direction: DOWN
+
+# Take screenshot
+- takeScreenshot: text_demo
+
+# Navigate back
+- back

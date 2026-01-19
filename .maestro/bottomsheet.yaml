@@ -1,0 +1,18 @@
+appId: com.rnetestapp
+---
+# BottomSheet Component E2E Tests
+- launchApp
+
+# Navigate to BottomSheet demo
+- scroll:
+    direction: DOWN
+- tapOn: "BottomSheet"
+
+# Verify screen loaded
+- assertVisible: "BottomSheet"
+
+# Take screenshot
+- takeScreenshot: bottomsheet_demo
+
+# Navigate back
+- back

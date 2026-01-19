@@ -1,0 +1,18 @@
+appId: com.rnetestapp
+---
+# AirbnbRating Component E2E Tests
+- launchApp
+
+# Navigate to AirbnbRating demo
+- scroll:
+    direction: DOWN
+- tapOn: "AirbnbRating"
+
+# Verify screen loaded
+- assertVisible: "AirbnbRating"
+
+# Take screenshot
+- takeScreenshot: airbnbrating_demo
+
+# Navigate back
+- back

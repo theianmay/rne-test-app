@@ -1,0 +1,18 @@
+appId: com.rnetestapp
+---
+# Divider Component E2E Tests
+- launchApp
+
+# Navigate to Divider demo
+- scroll:
+    direction: DOWN
+- tapOn: "Divider"
+
+# Verify screen loaded
+- assertVisible: "Divider"
+
+# Take screenshot
+- takeScreenshot: divider_demo
+
+# Navigate back
+- back

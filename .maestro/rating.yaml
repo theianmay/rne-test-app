@@ -1,0 +1,18 @@
+appId: com.rnetestapp
+---
+# Rating Component E2E Tests
+- launchApp
+
+# Navigate to Rating demo
+- scroll:
+    direction: DOWN
+- tapOn: "Rating"
+
+# Verify screen loaded
+- assertVisible: "Rating"
+
+# Take screenshot
+- takeScreenshot: rating_demo
+
+# Navigate back
+- back

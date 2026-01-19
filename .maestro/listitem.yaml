@@ -1,0 +1,22 @@
+appId: com.rnetestapp
+---
+# ListItem Component E2E Tests
+- launchApp
+
+# Navigate to ListItem demo
+- scroll:
+    direction: DOWN
+- tapOn: "ListItem"
+
+# Verify screen loaded
+- assertVisible: "ListItem"
+
+# Scroll through examples
+- scroll:
+    direction: DOWN
+
+# Take screenshot
+- takeScreenshot: listitem_demo
+
+# Navigate back
+- back

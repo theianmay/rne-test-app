@@ -1,0 +1,18 @@
+appId: com.rnetestapp
+---
+# FAB Component E2E Tests
+- launchApp
+
+# Navigate to FAB demo
+- scroll:
+    direction: DOWN
+- tapOn: "FAB"
+
+# Verify screen loaded
+- assertVisible: "FAB"
+
+# Take screenshot
+- takeScreenshot: fab_demo
+
+# Navigate back
+- back

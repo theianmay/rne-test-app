@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-// Component list with routes
+// Component list with routes (alphabetically sorted)
 const components = [
   {
     name: "AirbnbRating",
@@ -20,14 +20,46 @@ const components = [
   },
   { name: "Avatar", route: "/components/avatar", icon: "account-circle" },
   { name: "Badge", route: "/components/badge", icon: "notifications" },
+  {
+    name: "BottomSheet",
+    route: "/components/bottomsheet",
+    icon: "vertical-align-bottom",
+  },
   { name: "Button", route: "/components/button", icon: "touch-app" },
+  { name: "ButtonGroup", route: "/components/buttongroup", icon: "view-week" },
   { name: "Card", route: "/components/card", icon: "credit-card" },
+  { name: "CheckBox", route: "/components/checkbox", icon: "check-box" },
   { name: "Chip", route: "/components/chip", icon: "label" },
+  { name: "Dialog", route: "/components/dialog", icon: "question-answer" },
   { name: "Divider", route: "/components/divider", icon: "remove" },
-  { name: "Input", route: "/components/input", icon: "edit" },
-  { name: "Rating", route: "/components/rating", icon: "star" },
-  { name: "Text", route: "/components/text", icon: "text-fields" },
+  { name: "FAB", route: "/components/fab", icon: "add-circle" },
+  { name: "Header", route: "/components/header", icon: "web-asset" },
   { name: "Icon", route: "/components/icon", icon: "emoji-emotions" },
+  { name: "Image", route: "/components/image", icon: "image" },
+  { name: "Input", route: "/components/input", icon: "edit" },
+  {
+    name: "LinearProgress",
+    route: "/components/linearprogress",
+    icon: "linear-scale",
+  },
+  { name: "ListItem", route: "/components/listitem", icon: "list" },
+  { name: "Overlay", route: "/components/overlay", icon: "layers" },
+  {
+    name: "PricingCard",
+    route: "/components/pricingcard",
+    icon: "attach-money",
+  },
+  { name: "Rating", route: "/components/rating", icon: "star" },
+  { name: "SearchBar", route: "/components/searchbar", icon: "search" },
+  { name: "Skeleton", route: "/components/skeleton", icon: "hourglass-empty" },
+  { name: "Slider", route: "/components/slider", icon: "tune" },
+  { name: "SocialIcon", route: "/components/socialicon", icon: "share" },
+  { name: "SpeedDial", route: "/components/speeddial", icon: "speed" },
+  { name: "Switch", route: "/components/switch", icon: "toggle-on" },
+  { name: "Tab", route: "/components/tab", icon: "tab" },
+  { name: "Text", route: "/components/text", icon: "text-fields" },
+  { name: "Tile", route: "/components/tile", icon: "grid-view" },
+  { name: "Tooltip", route: "/components/tooltip", icon: "info" },
 ];
 
 export default function HomeScreen() {

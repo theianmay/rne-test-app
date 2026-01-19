@@ -8,41 +8,40 @@
 | -------------- | ----------- | ------------ |
 | AirbnbRating   | ✅          | **Complete** |
 | Avatar         | ✅          | **Complete** |
-| Badge          | ✅          | Placeholder  |
-| BottomSheet    | ❌          | Missing      |
+| Badge          | ✅          | **Complete** |
+| BottomSheet    | ✅          | **Complete** |
 | Button         | ✅          | **Complete** |
-| ButtonGroup    | ❌          | Missing      |
-| Card           | ✅          | Placeholder  |
-| CheckBox       | ❌          | Missing      |
-| Chip           | ✅          | Placeholder  |
-| Dialog         | ❌          | Missing      |
-| Divider        | ✅          | Placeholder  |
-| FAB            | ❌          | Missing      |
-| Header         | ❌          | Missing      |
-| Icon           | ✅          | Placeholder  |
-| Image          | ❌          | Missing      |
-| Input          | ✅          | Placeholder  |
-| LinearProgress | ❌          | Missing      |
-| ListItem       | ❌          | Missing      |
-| Overlay        | ❌          | Missing      |
-| PricingCard    | ❌          | Missing      |
-| Rating         | ✅          | Placeholder  |
-| SearchBar      | ❌          | Missing      |
-| Skeleton       | ❌          | Missing      |
-| Slider         | ❌          | Missing      |
-| SocialIcon     | ❌          | Missing      |
-| SpeedDial      | ❌          | Missing      |
-| Switch         | ❌          | Missing      |
-| Tab/TabView    | ❌          | Missing      |
-| Text           | ✅          | Placeholder  |
-| Tile           | ❌          | Missing      |
-| Tooltip        | ❌          | Missing      |
+| ButtonGroup    | ✅          | **Complete** |
+| Card           | ✅          | **Complete** |
+| CheckBox       | ✅          | **Complete** |
+| Chip           | ✅          | **Complete** |
+| Dialog         | ✅          | **Complete** |
+| Divider        | ✅          | **Complete** |
+| FAB            | ✅          | **Complete** |
+| Header         | ✅          | **Complete** |
+| Icon           | ✅          | **Complete** |
+| Image          | ✅          | **Complete** |
+| Input          | ✅          | **Complete** |
+| LinearProgress | ✅          | **Complete** |
+| ListItem       | ✅          | **Complete** |
+| Overlay        | ✅          | **Complete** |
+| PricingCard    | ✅          | **Complete** |
+| Rating         | ✅          | **Complete** |
+| SearchBar      | ✅          | **Complete** |
+| Skeleton       | ✅          | **Complete** |
+| Slider         | ✅          | **Complete** |
+| SocialIcon     | ✅          | **Complete** |
+| SpeedDial      | ✅          | **Complete** |
+| Switch         | ✅          | **Complete** |
+| Tab/TabView    | ✅          | **Complete** |
+| Text           | ✅          | **Complete** |
+| Tile           | ✅          | **Complete** |
+| Tooltip        | ✅          | **Complete** |
 
 ### Summary
 
-- **Complete demos**: 3 (AirbnbRating, Avatar, Button)
-- **Placeholder demos**: 8 (Badge, Card, Chip, Divider, Icon, Input, Rating, Text)
-- **Missing entirely**: 17 components
+- **Complete demos**: 28/28 (100% coverage)
+- **All @rneui/themed v5 components now have full demo implementations**
 
 ---
 

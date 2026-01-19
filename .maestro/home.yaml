@@ -1,0 +1,23 @@
+appId: com.rnetestapp
+---
+# Home Screen Tests
+- launchApp
+
+# Verify app title is visible
+- assertVisible: "React Native Elements"
+- assertVisible: "Component Testing App"
+
+# Verify version info card
+- assertVisible: "Package Versions"
+- assertVisible: "@rneui/base:"
+- assertVisible: "5.0.0"
+
+# Verify components list is visible
+- assertVisible: "Available Components"
+
+# Scroll to see more components
+- scroll:
+    direction: DOWN
+
+# Take screenshot
+- takeScreenshot: home_screen

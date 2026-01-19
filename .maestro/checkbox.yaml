@@ -1,0 +1,30 @@
+appId: com.rnetestapp
+---
+# CheckBox Component E2E Tests
+- launchApp
+
+# Navigate to CheckBox demo
+- scroll:
+    direction: DOWN
+- tapOn: "CheckBox"
+
+# Verify CheckBox screen loaded
+- assertVisible: "CheckBox"
+
+# Verify basic checkbox examples
+- assertVisible: "Basic CheckBox"
+
+# Tap on checkboxes to toggle
+- tapOn: "Option 1"
+- tapOn: "Option 2"
+
+# Scroll to see more examples
+- scroll:
+    direction: DOWN
+
+# Take screenshot
+- takeScreenshot: checkbox_demo
+
+# Navigate back
+- tapOn:
+    id: "header-back"

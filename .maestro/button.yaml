@@ -1,0 +1,37 @@
+appId: com.rnetestapp
+---
+# Button Component E2E Tests
+- launchApp
+
+# Navigate to Button demo
+- tapOn: "Button"
+
+# Verify Button screen loaded
+- assertVisible: "Button"
+
+# Test solid button type
+- assertVisible: "Solid"
+- tapOn: "Solid"
+
+# Test outline button type
+- assertVisible: "Outline"
+- tapOn: "Outline"
+
+# Test clear button type
+- assertVisible: "Clear"
+- tapOn: "Clear"
+
+# Scroll to see more examples
+- scroll:
+    direction: DOWN
+
+# Verify different sizes visible
+- assertVisible: "Large"
+- assertVisible: "Small"
+
+# Take screenshot
+- takeScreenshot: button_demo
+
+# Navigate back
+- tapOn:
+    id: "header-back"

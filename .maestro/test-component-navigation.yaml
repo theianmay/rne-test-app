@@ -1,0 +1,29 @@
+appId: com.rnetestapp
+---
+# Reusable flow to test component navigation
+# Requires: COMPONENT_NAME environment variable
+
+# Scroll to find component if needed
+- scroll:
+    direction: DOWN
+
+# Try to tap on the component
+- tapOn: ${COMPONENT_NAME}
+
+# Wait for screen to load
+- extendedWaitUntil:
+    visible: ${COMPONENT_NAME}
+    timeout: 5000
+
+# Verify we're on the component screen
+- assertVisible: ${COMPONENT_NAME}
+
+# Scroll through content
+- scroll:
+    direction: DOWN
+
+# Take screenshot
+- takeScreenshot: ${COMPONENT_NAME}_screen
+
+# Navigate back to home
+- back

@@ -3,11 +3,11 @@ import { Card, Divider, Text } from "@rneui/themed";
 import { Link } from "expo-router";
 import React from "react";
 import {
-    Pressable,
-    ScrollView,
-    StatusBar,
-    StyleSheet,
-    View,
+  Pressable,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -64,7 +64,10 @@ const components = [
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView style={styles.safeArea} edges={["left", "right", "bottom"]}>
+    <SafeAreaView
+      style={styles.safeArea}
+      edges={["left", "right", "bottom", "top"]}
+    >
       <StatusBar
         barStyle="dark-content"
         backgroundColor="#f5f5f5"

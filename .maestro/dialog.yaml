@@ -1,0 +1,36 @@
+appId: com.rnetestapp
+---
+# Dialog Component E2E Tests
+- launchApp
+
+# Navigate to Dialog demo
+- scroll:
+    direction: DOWN
+- tapOn: "Dialog"
+
+# Verify Dialog screen loaded
+- assertVisible: "Dialog"
+
+# Open basic dialog
+- tapOn: "Open Basic Dialog"
+
+# Verify dialog is visible
+- assertVisible: "This is a basic dialog"
+
+# Close dialog by tapping backdrop or close
+- tapOn:
+    point: "50%,20%"
+
+# Open confirmation dialog
+- tapOn: "Open Confirmation"
+
+# Verify confirmation dialog elements
+- assertVisible: "Confirm Action"
+- assertVisible: "Cancel"
+- assertVisible: "Confirm"
+
+# Tap Cancel to close
+- tapOn: "Cancel"
+
+# Take screenshot
+- takeScreenshot: dialog_demo

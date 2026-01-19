@@ -1,0 +1,36 @@
+appId: com.rnetestapp
+---
+# Full Component Flow - Tests navigation to all major components
+- launchApp
+
+# Verify home screen
+- assertVisible: "React Native Elements"
+
+# Test core components navigation
+- runFlow: ./test-component-navigation.yaml
+  env:
+    COMPONENT_NAME: "Button"
+
+- runFlow: ./test-component-navigation.yaml
+  env:
+    COMPONENT_NAME: "CheckBox"
+
+- runFlow: ./test-component-navigation.yaml
+  env:
+    COMPONENT_NAME: "Input"
+
+- runFlow: ./test-component-navigation.yaml
+  env:
+    COMPONENT_NAME: "Switch"
+
+# Test modal components
+- runFlow: ./test-component-navigation.yaml
+  env:
+    COMPONENT_NAME: "Dialog"
+
+- runFlow: ./test-component-navigation.yaml
+  env:
+    COMPONENT_NAME: "BottomSheet"
+
+# Take final screenshot
+- takeScreenshot: full_flow_complete

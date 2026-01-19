@@ -2,6 +2,14 @@ import { Input } from "@rneui/themed";
 import { fireEvent, render } from "@testing-library/react-native";
 import React from "react";
 
+// Skip animation timers to avoid bezier issues
+beforeEach(() => {
+  jest.useFakeTimers();
+});
+afterEach(() => {
+  jest.useRealTimers();
+});
+
 describe("Input Component", () => {
   it("renders correctly with placeholder", () => {
     const { getByPlaceholderText } = render(<Input placeholder="Enter text" />);

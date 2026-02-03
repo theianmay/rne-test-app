@@ -31,7 +31,7 @@ export default function TileScreen() {
             <Card.Divider />
             <View style={styles.tileContainer}>
               <Tile
-                imageSrc={{ uri: "https://picsum.photos/400/200?random=1" }}
+                imageSrc={{ uri: "https://picsum.photos/300/150?random=1" }}
                 title="Mountain View"
                 containerStyle={styles.tile}
               />
@@ -44,7 +44,7 @@ export default function TileScreen() {
             <Card.Divider />
             <View style={styles.tileContainer}>
               <Tile
-                imageSrc={{ uri: "https://picsum.photos/400/200?random=2" }}
+                imageSrc={{ uri: "https://picsum.photos/300/150?random=2" }}
                 title="Beautiful Sunset"
                 caption="Captured at the beach"
                 containerStyle={styles.tile}
@@ -58,7 +58,7 @@ export default function TileScreen() {
             <Card.Divider />
             <View style={styles.tileContainer}>
               <Tile
-                imageSrc={{ uri: "https://picsum.photos/400/250?random=3" }}
+                imageSrc={{ uri: "https://picsum.photos/300/180?random=3" }}
                 title="Featured Article"
                 caption="Learn about the latest trends in design"
                 featured
@@ -73,7 +73,7 @@ export default function TileScreen() {
             <Card.Divider />
             <View style={styles.tileContainer}>
               <Tile
-                imageSrc={{ uri: "https://picsum.photos/400/180?random=4" }}
+                imageSrc={{ uri: "https://picsum.photos/300/140?random=4" }}
                 title="Tap Me!"
                 caption="This tile is interactive"
                 onPress={() =>
@@ -91,7 +91,7 @@ export default function TileScreen() {
             <Card.Divider />
             <View style={styles.tileContainer}>
               <Tile
-                imageSrc={{ uri: "https://picsum.photos/400/200?random=5" }}
+                imageSrc={{ uri: "https://picsum.photos/300/150?random=5" }}
                 title="Styled Title"
                 caption="With custom colors"
                 titleStyle={styles.customTitle}
@@ -108,7 +108,7 @@ export default function TileScreen() {
             <Card.Divider />
             <View style={styles.tileContainer}>
               <Tile
-                imageSrc={{ uri: "https://picsum.photos/400/180?random=6" }}
+                imageSrc={{ uri: "https://picsum.photos/300/140?random=6" }}
                 title="Play Video"
                 icon={{
                   name: "play-circle",
@@ -175,11 +175,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   tileContainer: {
-    marginHorizontal: -15,
     marginBottom: -10,
+    width: "100%",
   },
   tile: {
     marginBottom: 0,
+    width: "100%",
   },
   note: {
     textAlign: "center",
@@ -202,10 +203,11 @@ const styles = StyleSheet.create({
   gridContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginHorizontal: -15,
+    width: "100%",
   },
   gridTile: {
     width: "48%",
+    maxWidth: "48%",
     marginBottom: 8,
   },
   gridTitle: {

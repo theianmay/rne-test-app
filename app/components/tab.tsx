@@ -155,17 +155,19 @@ export default function TabScreen() {
                 containerStyle={styles.customTabItem}
               />
             </Tab>
-            <TabView value={index3} onChange={setIndex3}>
-              <TabView.Item style={styles.customTabContent}>
-                <Text style={styles.tabText}>Recent items go here</Text>
-              </TabView.Item>
-              <TabView.Item style={styles.customTabContent}>
-                <Text style={styles.tabText}>Popular items go here</Text>
-              </TabView.Item>
-              <TabView.Item style={styles.customTabContent}>
-                <Text style={styles.tabText}>Trending items go here</Text>
-              </TabView.Item>
-            </TabView>
+            <View style={styles.customTabView}>
+              <TabView value={index3} onChange={setIndex3}>
+                <TabView.Item style={styles.customTabContent}>
+                  <Text style={styles.tabText}>Recent items go here</Text>
+                </TabView.Item>
+                <TabView.Item style={styles.customTabContent}>
+                  <Text style={styles.tabText}>Popular items go here</Text>
+                </TabView.Item>
+                <TabView.Item style={styles.customTabContent}>
+                  <Text style={styles.tabText}>Trending items go here</Text>
+                </TabView.Item>
+              </TabView>
+            </View>
           </Card>
 
           {/* Dense Tabs */}
@@ -210,6 +212,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#333",
     marginTop: 8,
+    textAlign: "center",
+    flexWrap: "wrap",
   },
   indicator: {
     backgroundColor: "#2089dc",
@@ -248,6 +252,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     minHeight: 80,
     backgroundColor: "#faf5fc",
+  },
+  customTabView: {
+    height: 120,
   },
   note: {
     textAlign: "center",

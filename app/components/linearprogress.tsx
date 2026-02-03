@@ -119,13 +119,13 @@ export default function LinearProgressScreen() {
             <LinearProgress variant="determinate" value={0.6} />
 
             <Text style={[styles.colorLabel, { marginTop: 16 }]}>Success</Text>
-            <LinearProgress variant="determinate" value={0.6} color="success" />
+            <LinearProgress variant="determinate" value={0.6} color="#4caf50" />
 
             <Text style={[styles.colorLabel, { marginTop: 16 }]}>Warning</Text>
-            <LinearProgress variant="determinate" value={0.6} color="warning" />
+            <LinearProgress variant="determinate" value={0.6} color="#ff9800" />
 
             <Text style={[styles.colorLabel, { marginTop: 16 }]}>Error</Text>
-            <LinearProgress variant="determinate" value={0.6} color="error" />
+            <LinearProgress variant="determinate" value={0.6} color="#f44336" />
           </Card>
 
           {/* Custom Colors */}

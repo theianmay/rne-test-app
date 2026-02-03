@@ -65,27 +65,13 @@ export default function ButtonGroupScreen() {
             <Card.Title>Multi-Select</Card.Title>
             <Card.Divider />
             <ButtonGroup
-              buttons={["S", "M", "T", "W", "T", "F", "S"]}
+              buttons={["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]}
               selectedIndexes={selectedIndexes}
-              onPress={(index) => {
-                if (selectedIndexes.includes(index)) {
-                  setSelectedIndexes(
-                    selectedIndexes.filter((i) => i !== index),
-                  );
-                } else {
-                  setSelectedIndexes([...selectedIndexes, index]);
-                }
+              onPress={(value) => {
+                setSelectedIndexes(value);
               }}
               selectMultiple
             />
-            <Text style={styles.valueText}>
-              Selected days:{" "}
-              {selectedIndexes
-                .map(
-                  (i) => ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][i],
-                )
-                .join(", ") || "None"}
-            </Text>
           </Card>
 
           {/* Vertical ButtonGroup */}

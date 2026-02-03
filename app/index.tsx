@@ -92,12 +92,12 @@ export default function HomeScreen() {
           <View style={styles.versionRow}>
             <MaterialIcons name="info" size={20} color="#2089dc" />
             <Text style={styles.versionText}>@rneui/base: </Text>
-            <Text style={styles.versionNumber}>5.0.0</Text>
+            <Text style={styles.versionNumber}>Bleeding Edge</Text>
           </View>
           <View style={styles.versionRow}>
             <MaterialIcons name="info" size={20} color="#2089dc" />
             <Text style={styles.versionText}>@rneui/themed: </Text>
-            <Text style={styles.versionNumber}>5.0.0</Text>
+            <Text style={styles.versionNumber}>Bleeding Edge</Text>
           </View>
         </Card>
 
